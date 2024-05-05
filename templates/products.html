@@ -5,11 +5,7 @@
 
 <body>
 {% for product in products %}
-    <img src="{{product.image.url}}"/><br>
-    {{ product.category }}<br>
-    {{ product.make }}<br>
-    {{ product.price }}<br>
-    {{ product.description }}<br>
+<a href="{% url 'Products:detail' product.pk %}" >{{ product.make }}</a><hr>
 
 {% endfor %}
 

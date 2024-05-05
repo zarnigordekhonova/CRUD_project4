@@ -6,7 +6,8 @@
 
 <body>
 {% for category in categories %}
-<a href="{% url 'get_products' category.pk %}" >{{ category.name }}</a><br>
+<a href="{% url 'Products:get_products' category.pk %}" >{{ category.name }}</a><br>
 {% endfor %}
-
+<br>
+<a href="{% url 'Products:add_products' %}"><b>Add Products</b></a><br>
 </body>
